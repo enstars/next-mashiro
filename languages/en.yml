@@ -1,14 +1,14 @@
 name: English
 
 title:
-  archive: Archive
+  archive: History
   category: Category
   tag: Tag
   schedule: Schedule
 
 menu:
   home: Home
-  archives: Archives
+  archives: History
   categories: Categories
   tags: Tags
   about: About
@@ -16,6 +16,7 @@ menu:
   schedule: Schedule
   sitemap: Sitemap
   commonweal: Commonweal 404
+  library: Library
 
 sidebar:
   overview: Overview
@@ -34,12 +35,12 @@ post:
   views: Views
   related_posts: Related Posts
   copyright:
-    author: Post author
+    author: Author
     link: Post link
     post_author: Written by
     post_link: This article originally appeared on
     license_title: Copyright Notice
-    license_content: "All articles in this blog are licensed under %s unless stating additionally."
+    license_content: "All articles in this blog are licensed under %s unless stated otherwise."
 
 footer:
   powered: "Powered by %s"
@@ -74,7 +75,7 @@ search:
   hits: "%s results found"
 
 cheers:
-  um: Um..
+  um: Um...
   ok: OK
   nice: Nice
   good: Good
@@ -106,8 +107,8 @@ accessibility:
   select_lang: Select language
 
 symbols_count_time:
-  count: Symbols count in article
-  count_total: Symbols count total
+  count: Character count
+  count_total: Total character count
   time: Reading time
-  time_total: Reading time total
-  time_minutes: mins.
+  time_total: Total reading time
+  time_minutes: min
