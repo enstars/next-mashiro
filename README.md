@@ -13,6 +13,8 @@ Use `npm install` to download the required plugins.
 
 ## To-do
 
-[ ] Dark theme toggle
-[ ] Fix fonts
-[ ] Renovate TL layout
+- [ ] Dark theme toggle
+- [ ] Fix fonts
+- [ ] Renovate TL layout [(Kyuu's css)](https://cdn.discordapp.com/attachments/741075989563703506/878486676131942410/code.css)
+- [ ] Transfer files
+- [ ] Make more variables (enst)
