@@ -62,7 +62,7 @@ NexT.motion.middleWares = {
     document.querySelectorAll('.menu-item').forEach(targets => {
       sequence.push({
         targets,
-        complete: () => targets.classList.add('animated', 'fadeInDown'),
+        complete: () => targets.classList.add('animated', 'fadeInLeft'),
         deltaT  : '-=200'
       });
     });

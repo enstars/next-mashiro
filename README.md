@@ -1,5 +1,7 @@
 # NexT Mashiro
 
+Modified [NexT](https://github.com/next-theme/hexo-theme-next) theme, optimized for non-dev (Ensemble Stars) translators. The name "Mashiro" comes from [this dude](https://ensemble-stars.jp/characters/mashiro_tomoya/).
+
 ## Installation
 
 ```sh
@@ -15,10 +17,15 @@ Use `npm install` within the directory to install the required plugins.
 
 - [ ] Dark theme toggle
 - [ ] Fix fonts
-- [ ] Renovate TL layout
-  - [(Kyuu's css)](https://cdn.discordapp.com/attachments/741075989563703506/878486676131942410/code.css)
+- [x] Renovate TL layout
+  - [ ] Phraser (?)
 - [x] Transfer files
-- [ ] Make more variables
-  - Location, setting, narration, etc.
+- [x] Make more variables
 - [ ] Make config easier for non-coders
-  - Styling under `css/_variables/base.styl`, colors under `css/_colors.styl`
+- [ ] Find a way to separate the two themes (?)
+
+## References
+
+- Styling: `css/_variables/base.styl`, `css/_colors.styl`
+- [Bubble css and variables](https://github.com/watatomo/css)
+  - [Images](https://github.com/watatomo/img)

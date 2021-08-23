@@ -6,7 +6,7 @@
 
 .posts-expand .post-title {
   font-size: $font-size-largest;
-  font-weight: normal;
+  font-weight: bold;
   margin: initial;
   word-wrap();
 
@@ -41,7 +41,7 @@
     background: var(--link-color);
     bottom: 0;
     content: '';
-    height: 2px;
+    height: 3px;
     // Fix issue #75
     left: 0;
     position: absolute;
@@ -87,11 +87,11 @@
 // Flexbox layout makes it possible to reorder the child
 // elements of .post-meta through the `order` CSS property
 .post-meta {
-  flex-wrap();
+  display: inline;
 }
 
 // .post-meta-item exists in .post-meta and footer
-:not(.post-meta-break) + .post-meta-item::before {
+:not(br) + .post-meta-item::before {
   content: '|';
   margin: 0 .5em;
 }
@@ -108,11 +108,6 @@
   +tablet-mobile() {
     display: none;
   }
-}
-
-.post-meta-break {
-  flex-basis: 100%;
-  height: 0;
 }
 
 if (hexo-config('busuanzi_count.enable') and hexo-config('busuanzi_count.post_views')) {

@@ -75,10 +75,8 @@ get_font_family(config) {
 }
 
 // Font families.
-$font-family-chinese      = 'PingFang SC', 'Microsoft YaHei';
-
 $font-family-base         = $font-family-chinese, sans-serif;
-$font-family-base         = get_font_family('global'), $font-family-chinese, sans-serif if get_font_family('global');
+$font-family-base         = get_font_family('global'), sans-serif if get_font_family('global');
 
 $font-family-logo         = $font-family-base;
 $font-family-logo         = get_font_family('title'), $font-family-base if get_font_family('title');
@@ -89,8 +87,8 @@ $font-family-headings     = get_font_family('headings'), $font-family-base if ge
 $font-family-posts        = $font-family-base;
 $font-family-posts        = get_font_family('posts'), $font-family-base if get_font_family('posts');
 
-$font-family-monospace    = consolas, Menlo, monospace, $font-family-chinese;
-$font-family-monospace    = get_font_family('codes'), consolas, Menlo, monospace, $font-family-chinese if get_font_family('codes');
+$font-family-monospace    = consolas, Menlo, monospace;
+$font-family-monospace    = get_font_family('codes'), consolas, Menlo, monospace if get_font_family('codes');
 
 
 // Font size
@@ -110,7 +108,7 @@ $font-size-headings-base  = (hexo-config('font.enable') and hexo-config('font.he
 
 
 // Global line height
-$line-height-base         = 2;
+$line-height-base         = 1.5;
 $line-height-code-block   = 1.6; // Can't be less than 1.3;
 
 
@@ -193,12 +191,6 @@ $content-desktop-largest        = 900px;
 $content-desktop-padding        = 40px;
 $content-tablet-padding         = 10px;
 $content-mobile-padding         = 8px;
-
-
-// Headband
-// --------------------------------------------------
-$headband-height                = 3px;
-$headband-bg                    = $black-deep;
 
 
 // Section Header
@@ -284,80 +276,96 @@ $post-card-margin             = 1em 0 0;
 // --------------------------------------------------
 // Read note light_bg_offset from NexT config and set in '$lbg%' to use it as string variable.
 $lbg = hexo-config('note.light_bg_offset') is a 'unit' ? unit(hexo-config('note.light_bg_offset'), '%') : 0;
-$note-types = 'default' 'primary' 'info' 'success' 'warning' 'danger';
+$note-types = 'default' 'primary' 'info' 'success' 'warning' 'danger' 'location' 'narration';
 
 $note-border-radius         = 3px;
 
 $note-border = {
-  default : #777,
-  primary : #6f42c1,
-  info    : #428bca,
-  success : #5cb85c,
-  warning : #f0ad4e,
-  danger  : #d9534f
+  default: #777,
+  primary: #6f42c1,
+  info: #428bca,
+  success: #5cb85c,
+  warning: #f0ad4e,
+  danger: #d9534f,
+  location: #428bca,
+  narration: #6f42c1
 };
 
 $note-bg = {
-  default : lighten(spin($note-border.default, 0), 94% + $lbg),
-  primary : lighten(spin($note-border.primary, 10), 92% + $lbg),
-  info    : lighten(spin($note-border.info, -10), 91% + $lbg),
-  success : lighten(spin($note-border.success, 10), 90% + $lbg),
-  warning : lighten(spin($note-border.warning, 10), 88% + $lbg),
-  danger  : lighten(spin($note-border.danger, -10), 92% + $lbg)
+  default: lighten(spin($note-border.default, 0), 94% + $lbg),
+  primary: lighten(spin($note-border.primary, 10), 92% + $lbg),
+  info: lighten(spin($note-border.info, -10), 91% + $lbg),
+  success: lighten(spin($note-border.success, 10), 90% + $lbg),
+  warning: lighten(spin($note-border.warning, 10), 88% + $lbg),
+  danger: lighten(spin($note-border.danger, -10), 92% + $lbg)
+  location: lighten(spin($note-border.location, -10), 91% + $lbg),
+  narration: lighten(spin($note-border.narration, 10), 92% + $lbg)
 };
 
 $note-text = {
-  default : $note-border.default,
-  primary : $note-border.primary,
-  info    : $note-border.info,
-  success : $note-border.success,
-  warning : $note-border.warning,
-  danger  : $note-border.danger
+  default: $note-border.default,
+  primary: $note-border.primary,
+  info: $note-border.info,
+  success: $note-border.success,
+  warning: $note-border.warning,
+  danger: $note-border.danger
+  location: $note-border.location,
+  narration: $note-border.narration
 };
 
 $note-icon = {
-  default : '\f0a9',
-  primary : '\f055',
-  info    : '\f05a',
-  success : '\f058',
-  warning : '\f06a',
-  danger  : '\f056'
+  default: '\f0a9',
+  primary: '\f055',
+  info: '\f05a',
+  success: '\f058',
+  warning: '\f06a',
+  danger: '\f056'
+  location: '\f124',
+  narration: 'f4ad'
 };
 
 $note-modern-border = {
-  default : #e1e1e1,
-  primary : #e1c2ff,
-  info    : #b3e5ef,
-  success : #d0e6be,
-  warning : #fae4cd,
-  danger  : #ebcdd2
+  default: #e1e1e1,
+  primary: #e1c2ff,
+  info: #b3e5ef,
+  success: #d0e6be,
+  warning: #fae4cd,
+  danger: #ebcdd2,
+  location: #b3e5ef,
+  narration: #e1c2ff
 };
 
 $note-modern-bg = {
-  default : lighten(spin($note-modern-border.default, 10), 60% + ($lbg * 4)),
-  primary : lighten(spin($note-modern-border.primary, 10), 40% + ($lbg * 4)),
-  info    : lighten(spin($note-modern-border.info, 10), 50% + ($lbg * 4)),
-  success : lighten(spin($note-modern-border.success, 10), 40% + ($lbg * 4)),
-  warning : lighten(spin($note-modern-border.warning, 10), 43% + ($lbg * 4)),
-  danger  : lighten(spin($note-modern-border.danger, 10), 35% + ($lbg * 4))
+  default: lighten(spin($note-modern-border.default, 10), 60% + ($lbg * 4)),
+  primary: lighten(spin($note-modern-border.primary, 10), 40% + ($lbg * 4)),
+  info: lighten(spin($note-modern-border.info, 10), 50% + ($lbg * 4)),
+  success: lighten(spin($note-modern-border.success, 10), 40% + ($lbg * 4)),
+  warning: lighten(spin($note-modern-border.warning, 10), 43% + ($lbg * 4)),
+  danger: lighten(spin($note-modern-border.danger, 10), 35% + ($lbg * 4)),
+  location: lighten(spin($note-modern-border.location, 10), 50% + ($lbg * 4)),
+  narration: lighten(spin($note-modern-border.narration, 10), 40% + ($lbg * 4)),
 };
 
 $note-modern-text = {
-  default : $grey-dim,
-  primary : #6f42c1,
-  info    : #31708f,
-  success : #3c763d,
-  warning : #8a6d3b,
-  danger  : #a94442
+  default: $grey-dim,
+  primary: #6f42c1,
+  info: #31708f,
+  success: #3c763d,
+  warning: #8a6d3b,
+  danger: #a94442,
+  location: #31708f,
+  narration: #6f42c1
 };
 
 $note-modern-hover = {
-  default : darken(spin($note-modern-text.default, -10), 32%),
-  primary : darken(spin($note-modern-text.primary, -10), 22%),
-  info    : darken(spin($note-modern-text.info, -10), 32%),
-  success : darken(spin($note-modern-text.success, -10), 27%),
-  warning : darken(spin($note-modern-text.warning, -10), 18%),
-  danger  : darken(spin($note-modern-text.danger, -10), 22%)
+  default: darken(spin($note-modern-text.default, -10), 32%),
+  primary: darken(spin($note-modern-text.primary, -10), 22%),
+  info: darken(spin($note-modern-text.info, -10), 32%),
+  success: darken(spin($note-modern-text.success, -10), 27%),
+  warning: darken(spin($note-modern-text.warning, -10), 18%),
+  danger: darken(spin($note-modern-text.danger, -10), 22%),
+  location: darken(spin($note-modern-text.location, -10), 32%),
+  narration: darken(spin($note-modern-text.narration, -10), 22%)
 };
 
 
@@ -369,10 +377,12 @@ $tbr                        = 0;
 // Label colors
 // --------------------------------------------------
 $label = {
-  default : lighten(spin($note-border.default, 0), 89% + $lbg),
-  primary : lighten(spin($note-border.primary, 10), 87% + $lbg),
-  info    : lighten(spin($note-border.info, -10), 86% + $lbg),
-  success : lighten(spin($note-border.success, 10), 85% + $lbg),
-  warning : lighten(spin($note-border.warning, 10), 83% + $lbg),
-  danger  : lighten(spin($note-border.danger, -10), 87% + $lbg)
+  default: lighten(spin($note-border.default, 0), 89% + $lbg),
+  primary: lighten(spin($note-border.primary, 10), 87% + $lbg),
+  info: lighten(spin($note-border.info, -10), 86% + $lbg),
+  success: lighten(spin($note-border.success, 10), 85% + $lbg),
+  warning: lighten(spin($note-border.warning, 10), 83% + $lbg),
+  danger: lighten(spin($note-border.danger, -10), 87% + $lbg),
+  location: lighten(spin($note-border.location, -10), 86% + $lbg),
+  narration: lighten(spin($note-border.narration, 10), 87% + $lbg)
 };
