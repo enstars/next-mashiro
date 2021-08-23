@@ -11,6 +11,8 @@ $ git clone https://github.com/watatomo/next-mashiro themes/next
 
 Configuration files: [_config.yml](https://github.com/watatomo/tl/blob/raw/_config.yml), [_config.next.yml](https://github.com/watatomo/tl/blob/raw/_config.next.yml)
 
+Replace your `package.json` file with [this one](https://github.com/watatomo/tl/blob/raw/package.json).
+
 Use `npm install` within the directory to install the required plugins.
 
 ## To-do
