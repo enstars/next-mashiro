@@ -3,7 +3,7 @@
   $note-style = hexo-config('note.style');
 
   border-radius: $note-border-radius;
-  margin-bottom: 20px;
+  margin: 25px 0;
   padding: 1em;
   position: relative;
 
@@ -41,6 +41,7 @@
   p, ul, ol, table, pre, blockquote, img {
     &:first-child {
       margin-top: 0;
+      margin-left: .8em;
     }
 
     &:last-child {
@@ -53,10 +54,10 @@
       padding-left: 2.5em;
 
       &::before {
-        font-size: 1.5em;
-        left: .3em;
+        font-size: 1.35em;
+        left: .8em;
         position: absolute;
-        top: calc(50% - 1em);
+        top: calc(50% - .75em);
       }
     }
   }
