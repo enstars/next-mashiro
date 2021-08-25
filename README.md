@@ -21,11 +21,14 @@ Use `npm install` within the directory to install the required plugins.
 
 ### Usage
 
+Place `<link href="https://watatomo.github.io/mashirout/enst.css" rel="stylesheet">` onto your md post file. This loads the css required onto your post.
+
 ```md
 {% bubble [CHARACTER] %}
     [dialogue text]
 {% endbubble %}
 ```
+
 ### Issues
 
 - Doesn't account for extra attributes `hidden` and `unknown`
