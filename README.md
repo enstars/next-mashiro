@@ -9,9 +9,7 @@ $ cd hexo-site
 $ git clone https://github.com/watatomo/next-mashiro themes/next
 ```
 
-Configuration files: [_config.yml](https://github.com/watatomo/tl/blob/raw/_config.yml), [_config.next.yml](https://github.com/watatomo/tl/blob/raw/_config.next.yml)
-
-Replace your `package.json` file with [this one](https://github.com/watatomo/tl/blob/raw/package.json).
+Replace your `package.json` file with [this one](https://github.com/watatomo/tl/blob/raw/package.json). Then copy and place these configuration files ([_config.yml](https://github.com/watatomo/tl/blob/raw/_config.yml), [_config.next.yml](https://github.com/watatomo/tl/blob/raw/_config.next.yml)) in your Hexo site's root folder and edit with what you need.
 
 Use `npm install` within the directory to install the required plugins.
 
@@ -33,7 +31,6 @@ Place `<link href="https://watatomo.github.io/mashirout/enst.css" rel="styleshee
 
 - Doesn't account for extra attributes `hidden` and `unknown`
   - Plan to use it like `{% bubble [CHARACTER], [ATTRIBUTE] %}`
-- Doesn't use Markdown*-it* which means footnotes don't work
 - Doesn't account for `spell` and `thought` styles
   - Could be worked around by using `<span>`, but that's also being used for sentences that have an em dash/special character ending (so it won't break at that character)
 
