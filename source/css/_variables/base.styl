@@ -276,7 +276,7 @@ $post-card-margin             = 1em 0 0;
 // --------------------------------------------------
 // Read note light_bg_offset from NexT config and set in '$lbg%' to use it as string variable.
 $lbg = hexo-config('note.light_bg_offset') is a 'unit' ? unit(hexo-config('note.light_bg_offset'), '%') : 0;
-$note-types = 'default' 'primary' 'info' 'success' 'warning' 'danger' 'location' 'narration';
+$note-types = 'default' 'primary' 'info' 'success' 'warning' 'danger' 'location' 'narration' 'umoption' 'cw';
 
 $note-border-radius         = 3px;
 
@@ -288,7 +288,9 @@ $note-border = {
   warning: #f0ad4e,
   danger: #d9534f,
   location: #428bca,
-  narration: #6f42c1
+  narration: #6f42c1,
+  umoption: #5cb85c,
+  cw: #d9534f,
 };
 
 $note-bg = {
@@ -297,9 +299,11 @@ $note-bg = {
   info: lighten(spin($note-border.info, -10), 91% + $lbg),
   success: lighten(spin($note-border.success, 10), 90% + $lbg),
   warning: lighten(spin($note-border.warning, 10), 88% + $lbg),
-  danger: lighten(spin($note-border.danger, -10), 92% + $lbg)
+  danger: lighten(spin($note-border.danger, -10), 92% + $lbg),
   location: lighten(spin($note-border.location, -10), 91% + $lbg),
-  narration: lighten(spin($note-border.narration, 10), 92% + $lbg)
+  narration: lighten(spin($note-border.narration, 10), 92% + $lbg),
+  umoption: lighten(spin($note-border.umoption, 10), 90% + $lbg),
+  cw: lighten(spin($note-border.cw, -10), 92% + $lbg)
 };
 
 $note-text = {
@@ -308,9 +312,11 @@ $note-text = {
   info: $note-border.info,
   success: $note-border.success,
   warning: $note-border.warning,
-  danger: $note-border.danger
+  danger: $note-border.danger,
   location: $note-border.location,
-  narration: $note-border.narration
+  narration: $note-border.narration,
+  umoption: $note-border.umoption,
+  cw: $note-border.danger
 };
 
 $note-icon = {
@@ -319,9 +325,11 @@ $note-icon = {
   info: '\f05a',
   success: '\f058',
   warning: '\f06a',
-  danger: '\f056'
+  danger: '\f056',
   location: '\f124',
-  narration: '\f005'
+  narration: '\f005',
+  umoption: '\f787',
+  cw: '\f071'
 };
 
 $note-modern-border = {
@@ -332,7 +340,9 @@ $note-modern-border = {
   warning: #fae4cd,
   danger: #ebcdd2,
   location: #b3e5ef,
-  narration: #e1c2ff
+  narration: #e1c2ff,
+  umoption: #d0e6be,
+  cw: #ebcdd2
 };
 
 $note-modern-bg = {
@@ -344,6 +354,8 @@ $note-modern-bg = {
   danger: lighten(spin($note-modern-border.danger, 10), 35% + ($lbg * 4)),
   location: lighten(spin($note-modern-border.location, 10), 50% + ($lbg * 4)),
   narration: lighten(spin($note-modern-border.narration, 10), 40% + ($lbg * 4)),
+  umoption: lighten(spin($note-modern-border.success, 10), 40% + ($lbg * 4)),
+  cw: lighten(spin($note-modern-border.danger, 10), 35% + ($lbg * 4))
 };
 
 $note-modern-text = {
@@ -354,7 +366,9 @@ $note-modern-text = {
   warning: #8a6d3b,
   danger: #a94442,
   location: #31708f,
-  narration: #6f42c1
+  narration: #6f42c1,
+  umoption: #3c763d,
+  cw: #a94442
 };
 
 $note-modern-hover = {
@@ -365,7 +379,9 @@ $note-modern-hover = {
   warning: darken(spin($note-modern-text.warning, -10), 18%),
   danger: darken(spin($note-modern-text.danger, -10), 22%),
   location: darken(spin($note-modern-text.location, -10), 32%),
-  narration: darken(spin($note-modern-text.narration, -10), 22%)
+  narration: darken(spin($note-modern-text.narration, -10), 22%),
+  umoption: darken(spin($note-modern-text.success, -10), 27%),
+  cw: darken(spin($note-modern-text.danger, -10), 22%)
 };
 
 
@@ -384,5 +400,7 @@ $label = {
   warning: lighten(spin($note-border.warning, 10), 83% + $lbg),
   danger: lighten(spin($note-border.danger, -10), 87% + $lbg),
   location: lighten(spin($note-border.location, -10), 86% + $lbg),
-  narration: lighten(spin($note-border.narration, 10), 87% + $lbg)
+  narration: lighten(spin($note-border.narration, 10), 87% + $lbg),
+  umoption: lighten(spin($note-border.success, 10), 85% + $lbg),
+  cw: lighten(spin($note-border.danger, -10), 87% + $lbg)
 };

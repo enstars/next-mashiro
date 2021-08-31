@@ -13,36 +13,6 @@ Replace your `package.json` file with [this one](https://github.com/watatomo/tl/
 
 Use `npm install` within the directory to install the required plugins.
 
-## Features
-
-**Mashirout:** A chat-like layout for dialogue. Still a work in progress and is only usable with *Ensemble Stars* characters.
-
-### Usage
-
-Place `<link href="https://watatomo.github.io/mashirout/enst.css" rel="stylesheet">` onto your md post file. This loads the css required onto your post.
-
-```md
-{% bubble [CHARACTER] %}
-    [dialogue text]
-{% endbubble %}
-```
-
-### Issues
-
-- Doesn't account for extra attributes `hidden` and `unknown`
-  - Plan to use it like `{% bubble [CHARACTER], [ATTRIBUTE] %}`
-- Doesn't account for `spell` and `thought` styles
-  - Could be worked around by using `<span>`, but that's also being used for sentences that have an em dash/special character ending (so it won't break at that character)
-
-## To-do
-
-- [ ] Dark theme toggle
-- [ ] Fix fonts
-- [x] Renovate TL layout
-- [x] Transfer files
-- [x] Make more variables
-- [ ] Make config easier for non-coders
-
 ## References
 
 - Styling: `css/_variables/base.styl`, `css/_colors.styl`

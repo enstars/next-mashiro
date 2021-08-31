@@ -53,8 +53,3 @@ hexo.extend.tag.register('subsubtabs', postTabs, true);
 const postVideo = require('./video');
 
 hexo.extend.tag.register('video', postVideo);
-
-const postBubble = require('./bubble')(hexo);
-
-hexo.extend.tag.register('bubble', postBubble, true);
-hexo.extend.tag.register('subbubble', postBubble, true);
