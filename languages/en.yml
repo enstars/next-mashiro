@@ -50,8 +50,8 @@ footer:
 counter:
   tag_cloud:
     zero: No tags
-    one: 1 tag in total
-    other: "%d tags in total"
+    one: 1 tag
+    other: "%d tags"
 
   categories:
     zero: No categories
@@ -59,9 +59,9 @@ counter:
     other: "%d categories in total"
 
   archive_posts:
-    zero: No posts.
-    one: 1 post.
-    other: "%d posts in total."
+    zero: No posts
+    one: 1 post
+    other: "%d posts"
 
 state:
   posts: posts
@@ -70,7 +70,7 @@ state:
 
 search:
   placeholder: Searching...
-  empty: "We didn't find any results for the search: %s"
+  empty: "We didn't find any results for %s"
   hits_time: "%s results found in %s ms"
   hits: "%s results found"
 
