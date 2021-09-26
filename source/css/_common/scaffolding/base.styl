@@ -50,6 +50,7 @@ p {
 a {
   border-bottom: 1px solid $link-decoration-color;
   color: var(--link-color);
+  transition: .2s ease-in-out;
   // For a:not(:any-link)
   cursor: pointer;
   outline: 0;
@@ -73,7 +74,7 @@ hr {
   background-image: repeating-linear-gradient(-45deg, $grey-lighter, $grey-lighter 4px, transparent 4px, transparent 8px);
   border: 0;
   height: 3px;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 blockquote {
@@ -100,6 +101,11 @@ dd {
 a.fn {
   border-bottom: none;
   color: #4d62d8;
+  transition: .2s ease-in-out;
+}
+
+a.fn:hover {
+  color: #2336a0;
 }
 
 img {
