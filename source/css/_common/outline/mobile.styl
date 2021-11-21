@@ -49,16 +49,25 @@ if (hexo-config('mobile_layout_economy')) {
       }
 
       img, video {
-        margin: .8em 0 !important;
+        margin: .85em 0 !important;
       }
 
       .note {
         margin: .8em 0 !important;
-        padding: 10px !important;
+        padding: 8px !important;
+
+        p {
+            font-size: .9em;
+        }
 
         if (hexo-config('note.icons')) {
           &:not(.no-icon) {
-            padding-left: 35px !important;
+            padding-left: 20px !important;
+
+            &::before {
+                font-size: 1.2em;
+                left: 0.5em;
+            }
           }
         }
       }

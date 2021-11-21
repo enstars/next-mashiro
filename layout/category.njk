@@ -4,28 +4,13 @@
 
 {% block title %}{{ __('title.category') }}: {{ page.category }} | {{ title }}{% endblock %}
 
-{% block class %}category posts-collapse{% endblock %}
+{% block class %}index posts-expand{% endblock %}
 
 {% block content %}
 
-  {######################}
-  {### CATEGORY BLOCK ###}
-  {######################}
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h2 class="collection-header">
-          {{- page.category }}
-          <small>{{ __('title.category') }}</small>
-        </h2>
-      </div>
-
-      {{ post_template.render(page.posts) }}
-    </div>
-  </div>
-  {##########################}
-  {### END CATEGORY BLOCK ###}
-  {##########################}
+  {%- for post in page.posts.toArray() %}
+    {{ partial('_macro/post.njk', {post: post, is_index: true}) }}
+  {%- endfor %}
 
   {%- include '_partials/pagination.njk' -%}
 
